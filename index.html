@@ -20,28 +20,30 @@
 
     <!-- Vendor CSS Files -->
     <link
-      href="vendor/bootstrap/css/bootstrap.min.css"
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link href="vendor/icofont/icofont.min.css" rel="stylesheet" />
-    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
 
     <link
-      href="vendor/font-awesome/css/font-awesome.min.css"
+      href="assets/vendor/font-awesome/css/font-awesome.min.css"
       rel="stylesheet"
     />
-    <link href="vendor/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet" />
     <link
-      href="vendor/owl.carousel/assets/owl.carousel.min.css"
+      href="assets/vendor/owl.carousel/assets/owl.carousel.min.css"
       rel="stylesheet"
     />
-    <link href="vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
 
-    <link href="vendor/venobox/venobox.css" rel="stylesheet" />
-    <link href="vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
 
     <!-- =======================================================
   * Template Name: NewBiz - v2.1.0
@@ -52,9 +54,6 @@
   </head>
 
   <body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="MGT6q5Jc"></script>
-
 
 
     <!-- ======= Header ======= -->
@@ -62,32 +61,44 @@
       <div class="container d-flex align-items-center justify-content-between">
         <!-- Uncomment below if you prefer to use an image logo -->
         <a href="index.html" class="logo"
-          ><img src="img/asf_logo2.png" alt="" class="img-fluid"
+          ><img src="assets/img/asf_logo2.png" alt="" class="img-fluid" 
         /></a>
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#">Donate</a></li>
-            <li><a href="#">Volunteer</a></li>
-            <li><a href="#team">Board</a></li>
+            <li class="active"><a href="#hero">Home</a></li>
+            <li class="drop-down">
+              <a href="">About</a>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="board.html">Our Board</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
             <li class="drop-down">
               <a href="">Resources</a>
               <ul>
-                <li><a href="#">Drop Down 1</a></li>
-                <li><a href="#">Drop Down 2</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Gallery</a></li>
               </ul>
             </li>
             <li><a href="#contact">Contact</a></li>
+            <li class="drop-down">
+              <a href="#"><strong>Member's Area</strong></a>
+              <ul>
+                <li><a href="#" data-toggle="modal" data-target="#modal1">Why Join?</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Sign Up</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
         <!-- .nav-menu -->
-
-        <a href="#about" class="get-started-btn scrollto" style="background-color: #2C0F2F;">Member Area</a>
       </div>
     </header>
     <!-- End Header -->
@@ -102,8 +113,8 @@
       >
         <div class="col-xl-6 col-lg-8">
           <h1>Excellence<br>in senior care.</h1>
-          <h2>Dedicated to improving the quality of life for seniors.</h2><br><br>
-          <button>Learn More</button>
+          <h2>Dedicated to improving the quality of life for seniors.</h2>
+          <button class="btn btn-outline-light">Learn More</button>
         </div>
       </div>
     </div>
@@ -111,86 +122,58 @@
   <!-- End Hero -->
 
     <main id="main">
-      <!-- ======= About Section ======= -->
-      <section id="about">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
+
+      <!--About-->
+     <!-- ======= Featured Services Section ======= -->
+     <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+          <header class="section-header" style="padding-top: 60px; ">
             <h3>About Us</h3>
-            <p>
-              A-Supreme Foundation began as a compassionate response to the plight of seniors who are unable to afford in-home care and as a result were at risk of being adversely compromised in their health and quality of life. Assigned to one such request, a Personal Support Worker (PSW) on arrival at the senior’s home called the A-Supreme Nursing and Home Care (ASNHC) office to assure the founders that even if she was not paid for the job, she would attend to the needs of the senior because of the deplorable state in which she found them. Inundated with similar requests, the founders of our parent corporation (ASNHC) Agency established the A-Supreme Foundation to fill the gap and help these seniors live with dignity. Since its founding in 2014, the Foundation has focused its attention on providing advocacy, education and health support services to seniors across the Greater Toronto Area (GTA).
+            <p style="font-size: 18px;">
+              A-Supreme Foundation began as a compassionate response to the plight of seniors who are unable to afford in-home care and as a result were at risk of being adversely compromised in their health and quality of life. Since its founding in 2014, the Foundation has focused its attention on providing advocacy, education and health support services to seniors across the Greater Toronto Area (GTA).
             </p>
           </header>
 
-          <div class="row about-container">
-            <div class="col-lg-6 content order-lg-1 order-2">
-
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-                <h4 class="title"><a href="">Mission</a></h4>
-                <p class="description">
-                  A-Supreme Foundation is dedicated to improving the quality of life for seniors, through education, advocacy, and resources
-                </p>
-              </div>
-
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon"><i class="fa fa-photo"></i></div>
-                <h4 class="title"><a href="">Vision</a></h4>
-                <p class="description">
-                  Be a global leader in advocating for the best quality of life for seniors.
-                </p>
-              </div>
-
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon"><i class="fa fa-bar-chart"></i></div>
-                <h4 class="title"><a href="">Values</a></h4>
-                <p class="description">
-                  Empathy. Integrity. Empowerment. Innovation. Respect. Dignity.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-lg-6 background order-lg-2" data-aos="zoom-in">
-              <img src="img/asf_logo2.png" class="img-fluid" alt="" />
+        <div class="row" style="padding-bottom: 60px;">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="icofont-heart"></i></div>
+              <h4 class="title" style="color:#2C0F2F">Mission</h4>
+              <p class="description">We are dedicated to improving the quality of life for seniors, through education, advocacy, and resources.</p>
             </div>
           </div>
 
-          <div class="row about-extra">
-            <div class="col-lg-6" data-aos="fade-right">
-              <img
-                src="img/1.jpg"
-                class="img-fluid"
-                alt=""
-                style="border-radius: 5%;"
-              />
-            </div>
-            <div class="col-lg-6 pt-5 pt-lg-0" data-aos="fade-left">
-              <h4 style="color: #2C0F2F;">
-                Mandate
-              </h4>
-              <p>
-                In December 2014, A-Supreme Foundation became a registered Canadian Charity to strengthen its capacity to respond to the needs of those most vulnerable. The foundation’s overarching focus is to improve the quality of life for vulnerable seniors in the GTA.
-              </p>
-              <h4 style="color: #2C0F2F;">
-                Funding
-              </h4>
-              <p>
-                ASF programs are funded by private and corporate donations, fundraising activities and some grant funding from the government.
-              </p>
-              <h4 style="color: #2C0F2F;">
-                Outlook
-              </h4>
-              <p>
-                It is our intent over time to extend our programs and services beyond the GTA to across Canada and play our part in ensuring that no senior is denied the care and dignity they deserve.
-              </p>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="icofont-map-pins"></i></div>
+              <h4 class="title" style="color:#2C0F2F">Vision</h4>
+              <p class="description">Be a global leader in advocating for the best quality of life for seniors.</p>
             </div>
           </div>
 
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="icofont-people"></i></div>
+              <h4 class="title" style="color:#2C0F2F">Values</h4>
+              <p class="description">Empathy. Integrity. Empowerment. Innovation. Respect. Dignity.</p>
+            </div>
+          </div>
           
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"></div>
+              <h4 class="title" style="color:#000">Learn More</h4>
+              <p class="description">Click here to learn more about our foundation and the work we do.</p>
             </div>
           </div>
+
+
         </div>
-      </section>
-      <!-- End About Section -->
+
+      </div>
+    </section><!-- End Featured Services Section -->
+      <!--End About-->
 
           <!-- ======= Cta Section ======= -->
           <section id="cta" class="cta">
@@ -199,7 +182,7 @@
                 <div class="col-lg-12 text-center text-lg-middle">
                   <h3>
                     At A-Supreme Foundation, we envision a world in which all of the
-                    elderly and infirm unable to care for themselves will be cared
+                    elderly and infirm who are unable to care for themselves will be cared
                     for by their communities. Make an active difference by donating or volunteering with us.
                   </h3>
                 </div>
@@ -217,7 +200,7 @@
         <div class="container" data-aos="fade-up">
           <header class="section-header">
             <h3>Services</h3>
-            <p>
+            <p style="font-size: 20px;">
               Laudem latine persequeris id sed, ex fabulas delectus quo. No vel
               partiendo abhorreant vituperatoribus.
             </p>
@@ -229,7 +212,7 @@
               data-aos="zoom-in"
               data-aos-delay="100"
             >
-            <img src="img/weEducate.jpg" width="320px"/>
+            <a href="#"><img src="./assets/img/weEducate.jpg" width="320px"/></a>
           </div>
         </div>
         <div class="justify-content-center">
@@ -238,7 +221,7 @@
               data-aos="zoom-in"
               data-aos-delay="200"
             >
-            <img src="img/weAdvocate.jpg" width="320px"/>
+            <a href="#"><img src="./assets/img/weAdvocate.jpg" width="320px"/></a>
         </div>
       </div>
       <div class="justify-content-right">
@@ -247,7 +230,7 @@
               data-aos="zoom-in"
               data-aos-delay="100"
             >
-            <img src="img/weCare.jpg" width="320px"/>
+          <a href="#"><img src="./assets/img/weCare.jpg" width="320px"/></a>
           </div>
         </div>
       </div>
@@ -256,183 +239,31 @@
       </section>
       <!-- End Services Section -->
 
-      <!-- ======= Testimonials Section ======= -->
-      <section id="testimonials" class="section-bg" style="background-color: #2C0F2F;">
-        <div class="container" data-aso="zoom-in">
-          <header class="section-header">
-            <h3 style="color: white;">Testimonials</h3>
-          </header>
-
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="owl-carousel testimonials-carousel">
-                <div class="testimonial-item">
-                  <h3>Full Name</h3>
-                  <h4>Position</h4>
-                  <p style="color: white;">
-                    Proin iaculis purus consequat sem cure digni ssim donec
-                    porttitora entum suscipit rhoncus. Accusantium quam,
-                    ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                    risus at semper.
-                  </p>
-                </div>
-
-                <div class="testimonial-item">
-                  <h3>Full Name</h3>
-                  <h4>Position</h4>
-                  <p style="color: white;">
-                    Export tempor illum tamen malis malis eram quae irure esse
-                    labore quem cillum quid cillum eram malis quorum velit fore
-                    eram velit sunt aliqua noster fugiat irure amet legam anim
-                    culpa.
-                  </p>
-                </div>
-
-                <div class="testimonial-item">
-                  <h3>Full Name</h3>
-                  <h4>Position</h4>
-                  <p style="color: white;">
-                    Enim nisi quem export duis labore cillum quae magna enim
-                    sint quorum nulla quem veniam duis minim tempor labore quem
-                    eram duis noster aute amet eram fore quis sint minim.
-                  </p>
-                </div>
-
-                <div class="testimonial-item">
-                  <h3>Full Name</h3>
-                  <h4>Position</h4>
-                  <p style="color: white;">
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa
-                    multos export minim fugiat minim velit minim dolor enim duis
-                    veniam ipsum anim magna sunt elit fore quem dolore labore
-                    illum veniam.
-                  </p>
-                </div>
-
-                <div class="testimonial-item">
-                  <h3>Full Name</h3>
-                  <h4>Position</h4>
-                  <p style="color: white;">
-                    Quis quorum aliqua sint quem legam fore sunt eram irure
-                    aliqua veniam tempor noster veniam enim culpa labore duis
-                    sunt culpa nulla illum cillum fugiat legam esse veniam culpa
-                    fore nisi cillum quid.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Testimonials Section -->
-
-      <!-- ======= Team Section ======= -->
-      <section id="team">
-        <div class="container" data-aos="fade-up">
-          <div class="section-header">
-            <h3>Our Board</h3>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque
-            </p>
-          </div>
-
-
-          <div class="row">
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="zoom-out"
-              data-aos-delay="100"
-            >
-              <div class="member">
-                <img src="img/team-1.jpg" class="img-fluid" alt="" />
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Keisha Johnson</h4>
-                    <span>President/Chair</span>
-                    <div>
-                      <br>
-                      <button class="btn btn-success" style="font-size: 12px;">About Keisha</button>
-                    </div>
+             <!-- ======= Cta Section ======= -->
+             <section id="cta" class="cta">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 text-center text-lg-middle">
+                    <h3>
+                      Connect with us on Facebook to keep up to date with our blog, our programs, and many other helpful resources.
+                    </h3>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="zoom-out"
-              data-aos-delay="200"
-            >
-              <div class="member">
-                <img src="img/team-2.jpg" class="img-fluid" alt="" />
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Henderson Ifill</h4>
-                    <span>Vice President & Chair, Fundraising Committee</span>
-                    <div>
-                      <br>
-                      <button class="btn btn-success" style="font-size: 12px;">About Henderson</button>
-                    </div>
+                  <div class="col-lg-9 cta-btn-container text-center">
+                    <a class="cta-btn align-left" style="border-radius: 50px;" href="#"><i class="bx bxl-facebook-circle"></i>Like Us</a>
+                    <a class="cta-btn align-middle" style="border-radius: 50px;" href="#">Our Blog</a>
+                    <a class="cta-btn align-right" style="border-radius: 50px;" href="#">Our Programs</a>
                   </div>
-                </div>
               </div>
-            </div>
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="zoom-out"
-              data-aos-delay="300"
-            >
-              <div class="member">
-                <img src="img/team-3.jpg" class="img-fluid" alt="" />
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Mackeda Bramwell</h4>
-                    <span>Vice President & Chair, Membership Committee</span>
-                    <div>
-                      <br>
-                      <button class="btn btn-success" style="font-size: 12px;">About Mackeda</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="zoom-out"
-              data-aos-delay="400"
-            >
-              <div class="member">
-                <img src="img/team-4.jpg" class="img-fluid" alt="" />
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Clive Riley</h4>
-                    <span>Treasurer</span>
-                    <div>
-                      <br>
-                      <button class="btn btn-success" style="font-size: 12px;">About Clive</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            
-          </div>
-        </div>
-      </section>
-      <!-- End Team Section -->
+            </section>
+            <!-- End Cta Section -->
 
       <!-- ======= Clients Section ======= -->
       <section id="clients" class="section-bg">
         <div class="container" data-aos="fade-up">
           <div class="section-header">
             <h3>Our Partners</h3>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque dere santome nida.
+            <p style="font-size: 20px;">
+              We are not alone in our quest of improving the lives of seniors. We have partnered with some other great organizations and together we are making a difference. Join us today!
             </p>
           </div>
 
@@ -444,7 +275,7 @@
             <div class="col-lg-3 col-md-4 col-xs-6">
               <div class="client-logo">
                 <img
-                  src="img/clients/client-1.png"
+                  src="assets/img/clients/client-1.png"
                   class="img-fluid"
                   alt=""
                 />
@@ -454,7 +285,7 @@
             <div class="col-lg-3 col-md-4 col-xs-6">
               <div class="client-logo">
                 <img
-                  src="img/clients/client-2.png"
+                  src="assets/img/clients/client-2.png"
                   class="img-fluid"
                   alt=""
                 />
@@ -464,7 +295,7 @@
             <div class="col-lg-3 col-md-4 col-xs-6">
               <div class="client-logo">
                 <img
-                  src="img/clients/client-3.png"
+                  src="assets/img/clients/client-3.png"
                   class="img-fluid"
                   alt=""
                 />
@@ -474,7 +305,7 @@
             <div class="col-lg-3 col-md-4 col-xs-6">
               <div class="client-logo">
                 <img
-                  src="img/clients/client-4.png"
+                  src="assets/img/clients/client-4.png"
                   class="img-fluid"
                   alt=""
                 />
@@ -504,7 +335,7 @@
             <div class="col-lg-3 col-md-4 col-xs-6">
               <div class="client-logo">
                 <img
-                  src="img/clients/client-7.png"
+                  src="assets/img/clients/client-7.png"
                   class="img-fluid"
                   alt=""
                 />
@@ -514,7 +345,7 @@
             <div class="col-lg-3 col-md-4 col-xs-6">
               <div class="client-logo">
                 <img
-                  src="img/clients/client-8.png"
+                  src="assets/img/clients/client-8.png"
                   class="img-fluid"
                   alt=""
                 />
@@ -525,23 +356,76 @@
       </section>
       <!-- End Clients Section -->
 
-                <!-- ======= Cta Section ======= -->
-                <section id="cta" class="cta">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-12 text-center text-lg-middle">
-                        <h3>
-                          Connect with us on Facebook to keep up to date with our blog, our upcoming events, and many other helpful resources.
-                        </h3>
-                      </div>
-                      <div class="col-lg-9 cta-btn-container text-center">
-                        <a class="cta-btn align-left" style="border-radius: 50px;" href="#"><i class="bx bxl-facebook-circle"></i>Like Us</a>
-                        <a class="cta-btn align-middle" style="border-radius: 50px;" href="#">Our Blog</a>
-                        <a class="cta-btn align-right" style="border-radius: 50px;" href="#">Our Events</a>
-                      </div>
+           <!-- ======= Testimonials Section ======= -->
+           <section id="testimonials" class="section-bg" style="background-color: #2C0F2F;">
+            <div class="container" data-aso="zoom-in">
+              <header class="section-header">
+                <h3 style="color: white;">Testimonials</h3>
+              </header>
+    
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="owl-carousel testimonials-carousel">
+                    <div class="testimonial-item">
+                      <h3>Full Name</h3>
+                      <h4>Position</h4>
+                      <p style="color: white;">
+                        Proin iaculis purus consequat sem cure digni ssim donec
+                        porttitora entum suscipit rhoncus. Accusantium quam,
+                        ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+                        risus at semper.
+                      </p>
+                    </div>
+    
+                    <div class="testimonial-item">
+                      <h3>Full Name</h3>
+                      <h4>Position</h4>
+                      <p style="color: white;">
+                        Export tempor illum tamen malis malis eram quae irure esse
+                        labore quem cillum quid cillum eram malis quorum velit fore
+                        eram velit sunt aliqua noster fugiat irure amet legam anim
+                        culpa.
+                      </p>
+                    </div>
+    
+                    <div class="testimonial-item">
+                      <h3>Full Name</h3>
+                      <h4>Position</h4>
+                      <p style="color: white;">
+                        Enim nisi quem export duis labore cillum quae magna enim
+                        sint quorum nulla quem veniam duis minim tempor labore quem
+                        eram duis noster aute amet eram fore quis sint minim.
+                      </p>
+                    </div>
+    
+                    <div class="testimonial-item">
+                      <h3>Full Name</h3>
+                      <h4>Position</h4>
+                      <p style="color: white;">
+                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa
+                        multos export minim fugiat minim velit minim dolor enim duis
+                        veniam ipsum anim magna sunt elit fore quem dolore labore
+                        illum veniam.
+                      </p>
+                    </div>
+    
+                    <div class="testimonial-item">
+                      <h3>Full Name</h3>
+                      <h4>Position</h4>
+                      <p style="color: white;">
+                        Quis quorum aliqua sint quem legam fore sunt eram irure
+                        aliqua veniam tempor noster veniam enim culpa labore duis
+                        sunt culpa nulla illum cillum fugiat legam esse veniam culpa
+                        fore nisi cillum quid.
+                      </p>
+                    </div>
                   </div>
-                </section>
-                <!-- End Cta Section -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Testimonials Section -->
+
 
       <!-- ======= Contact Section ======= -->
       <section id="contact">
@@ -554,9 +438,9 @@
             <div class="col-lg-6">
               <div class="map mb-4 mb-lg-0">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.0308116617603!2d-79.46682018404236!3d43.73068677911874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b322f2c900001%3A0x128922c24161b3b7!2sA-Supreme%20Foundation!5e0!3m2!1sen!2sca!4v1595600151774!5m2!1sen!2sca"
                   frameborder="0"
-                  style="border: 0; width: 100%; height: 312px;"
+                  style="border: 0; width: 100%; height: 385px;"
                   allowfullscreen
                 ></iframe>
               </div>
@@ -566,19 +450,19 @@
               <div class="row">
                 <div class="col-md-5 info">
                   <i class="ion-ios-location-outline"></i>
-                  <p>
-                    845 Wilson Avenue<br>
+                  <p style="font-size: 16px;">
+                    845 Wilson Avenue, #103<br>
                     North York, ON, M3K1E6, <br>
                     Canada
                   </p>
                 </div>
                 <div class="col-md-4 info">
                   <i class="ion-ios-email-outline"></i>
-                  <p>info@asupremefoundation.com</p>
+                  <p style="font-size: 16px;">info@asupremefoundation.com</p>
                 </div>
                 <div class="col-md-3 info">
                   <i class="ion-ios-telephone-outline"></i>
-                  <p>416.901.8655</p>
+                  <p style="font-size: 16px;">416.901.8655</p>
                 </div>
               </div>
 
@@ -702,7 +586,7 @@
             </li>
             <li>
               <i class="bx bx-chevron-right"></i>
-              <a href="#">Members Area</a>
+              <a href="#">Member Area</a>
             </li>
           </ul>
         </div>
@@ -737,23 +621,23 @@
   </div>
 </footer>
 <!-- End Footer -->
-
+        
+        
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="vendor/counterup/counterup.min.js"></script>
-    <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="vendor/venobox/venobox.min.js"></script>
-    <script src="vendor/aos/aos.js"></script>
-    <script src="vendor/jquery-sticky/jquery.sticky.js"></script>
-
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="js/main.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
